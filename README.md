@@ -20,12 +20,12 @@ not done yet
 ---
 
 ## Tentang
-SmartSalary adalah aplikasi prediksi gaji berbasis web yang dirancang untuk membantu individu merencanakan karir mereka dengan informasi gaji yang lebih terperinci. Menggunakan data historis dari berbagai sumber, aplikasi ini mengaplikasikan algoritma machine learning untuk menghasilkan estimasi gaji yang akurat berdasarkan kualifikasi, posisi, lokasi, dan pengalaman kerja pengguna.
+SmartSalary adalah aplikasi prediksi gaji berbasis web yang dirancang untuk membantu individu merencanakan karir mereka dengan informasi gaji yang lebih terperinci. Menggunakan data historis dari berbagai sumber, aplikasi ini mengaplikasikan algoritma machine learning untuk menghasilkan estimasi gaji yang akurat berdasarkan posisi, umur, dan pengalaman kerja pengguna.
 
 ---
 
 ## Fitur
-- **Prediksi Gaji**: Estimasi gaji berdasarkan kualifikasi, pengalaman, dan lokasi.
+- **Prediksi Gaji**: Estimasi gaji berdasarkan kualifikasi, pengalaman, dan umur.
 - **Interaktif Dashboard**: Interface yang intuitif untuk input data dan tampilan hasil prediksi.
 - **Grafik dan Analisis**: Menampilkan visualisasi data untuk membandingkan estimasi gaji dengan data yang dikumpulkan.
 - **Multi-User Support**: Kemampuan untuk mengelola profil pengguna dan data gaji secara individu.
@@ -38,4 +38,4 @@ Berikut adalah langkah-langkah untuk menginstal dan menjalankan aplikasi SmartSa
 
 1. **Clone repositori ini:**
    ```bash
-   git clone https://github.com/username/SmartSalaryPredictionWebApp.git
+   git clone https://github.com/username/SmartSalary.git
