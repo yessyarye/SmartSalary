@@ -39,3 +39,10 @@ Berikut adalah langkah-langkah untuk menginstal dan menjalankan aplikasi SmartSa
 1. **Clone repositori ini:**
    ```bash
    git clone https://github.com/username/SmartSalary.git
+
+   1. download
+   2. ganti nama folder jadi SalaryPredictionWebApp
+   3. bua database dengan query yg ada, isi dengan beberap akundengan role berbeda yaitu admin atau user
+   4. run 2 py flask yaitu flask.py dan script.py
+   5. run springboot
+   6. sudah
