@@ -1,6 +1,9 @@
 # SmartSalary Prediction Web App
+not done yet
 
-![Logo](https://link-to-your-logo.png)  
+![Logo](src/main/resources/static/assets/logos.png)
+
+
 
 ## Deskripsi
 **SmartSalary** adalah aplikasi prediksi gaji berbasis web yang menggunakan algoritma machine learning untuk membantu individu memperkirakan gaji yang sesuai dengan kualifikasi dan pengalaman mereka. Aplikasi ini bertujuan untuk memberikan wawasan akurat tentang gaji yang dapat diharapkan berdasarkan data pekerjaan dan profil pengguna.
