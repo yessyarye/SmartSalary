@@ -1,0 +1,24 @@
+CREATE DATABASE job_salary;
+
+Use job_salary
+
+CREATE TABLE members (
+    id BIGINT(20) AUTO_INCREMENT PRIMARY KEY,       -- Kolom ID sebagai kunci utama
+    email VARCHAR(255) NOT NULL UNIQUE,              -- Kolom email sebagai kunci unik
+    firstname VARCHAR(255) NOT NULL,                 -- Kolom nama depan
+    lastname VARCHAR(255) NOT NULL,                  -- Kolom nama belakang
+    password VARCHAR(255) NOT NULL,                  -- Kolom password
+    role VARCHAR(255) DEFAULT NULL,                  -- Kolom role dengan default NULL
+    tanggal DATE DEFAULT NULL                       -- Kolom tanggal berguna untuk menyimpan tanggal pendaftaran
+);
+
+
+CREATE TABLE salary_datas (
+    id BIGINT(20) AUTO_INCREMENT PRIMARY KEY,       -- Kolom ID sebagai kunci utama
+    age INT(11),                                    -- Kolom usia
+    gender VARCHAR(255) NOT NULL,                   -- Kolom jenis kelamin
+    education_level VARCHAR(255),                   -- Kolom tingkat pendidikan
+    job_title VARCHAR(255),                        -- Kolom jabatan
+    years_of_experience INT(11),                   -- Kolom tahun pengalaman kerja
+    salary FLOAT NOT NULL                          -- Kolom gaji
+);
