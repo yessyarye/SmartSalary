@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="id" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard User</title>
+    <!-- Link ke Line Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/SideBar.css}" />
+    <link rel="stylesheet" th:href="@{/css/dashboard.css}" />
+    <!-- Link ke Google Fonts Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap" rel="stylesheet">
+</head>
+<body class="admin-dashboard">
+
+<!-- Sidebar Menu -->
+ <div th:replace="SideBarUser.html"></div>
+
+<!-- Header -->
+<div th:replace="header.html"></div>
+
+<div class="main-content">
+    <h1>Selamat datang di SmartSalary</h1>
+    <p>Ini adalah halaman utama untuk User.</p>
+</div>
+
+<script th:src="@{/js/script.js}">
+</script>
+
+</body>
+</html>

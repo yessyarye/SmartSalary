@@ -1,0 +1,73 @@
+<!-- Kode template untuk Tabel CRUD -->
+<!DOCTYPE html>
+<html lang="id" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUD data gaji</title>
+    <!-- Link ke Line Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/SideBar.css}" />
+    <link rel="stylesheet" th:href="@{/css/prediksi.css}" />
+    <link rel="stylesheet" th:href="@{/css/crud.css}" />
+
+    <!-- Link ke Google Fonts Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap" rel="stylesheet">
+</head>
+<body class="crudData">
+<div th:replace="SideBarAdmin.html"></div>
+
+<div th:replace="header.html"></div>
+
+
+<div class="main-content">
+    <h1>Selamat datang di Dashboard Admin</h1>
+    <p>Ini adalah halaman dashboard untuk Admin.</p>
+
+    <h2>Data Gaji Karyawan</h2>
+    <a href="/admin/add_data" class="btn btn-primary">Add New Data</a>
+
+    <label for="search">Cari Data:</label>
+    <input type="text" id="search" placeholder="Masukkan kata kunci" onkeyup="searchTable()">
+
+    <table id="dataTable">
+        <thead>
+        <tr>
+            <th>No</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Education Level</th>
+            <th>Job Title</th>
+            <th>Years Of Experience</th>
+            <th>Salary</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="row, iterStat : ${salaryData}">
+            <td th:text="${row.id}"></td>
+            <td th:text="${row.age}"></td>
+            <td th:text="${row.gender}"></td>
+            <td th:text="${row.educationLevel}"></td>
+            <td th:text="${row.jobTitle}"></td>
+            <td th:text="${row.yearsOfExperience}"></td>
+            <td th:text="${row.salary}"></td>
+            <td>
+                <div class="button-container">
+                    <a th:href="@{'/admin/editdata/' + ${row.id}}" class="btn btn-warning">Edit</a>
+                    <form th:action="@{'/admin/deletedata/' + ${row.id}}" method="post" class="inline-form">
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                </div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<script th:src="@{/js/script.js}">
+</script>
+</body>
+</html>

@@ -1,0 +1,391 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  font-family: "Parkinsans", serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+
+header {
+  color: #ffffff;
+  padding: 20px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+header.transparent {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+header.scrolled {
+  background: linear-gradient(20deg, #007bff, #0056b3);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+main {
+  margin-top: 0px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+  padding-left: 14%;
+}
+
+.logo-image {
+  width: 50px; /* Atur lebar logo */
+  height: 40px; /* Atur tinggi logo */
+  object-fit: contain; /* Menjaga rasio logo */
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.auth-buttons{
+  padding-right: 16%;
+}
+
+.auth-buttons .btn {
+  background: #ffffff;
+  color: #000000;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-left: 10px;
+  transition: background 0.3s;
+}
+
+.auth-buttons .btn:hover {
+  background: #003d75;
+}
+
+.hero {
+  background: linear-gradient(180deg, #007bff, #000046);
+  color: white;
+
+  text-align: left;
+  padding-left: 15%;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.hero p{
+  font-size: 1.5rem;
+}
+
+.text-section {
+  flex: 1; /* Berikan teks bagian proporsional */
+  max-width: 35%; /* Batasi lebar maksimal untuk teks */
+}
+
+
+.hero .cta-btn {
+  background: #ffc107;
+  border-radius: 50px;
+  margin-top: 1%;
+}
+
+.cta-btn {
+  display: inline-block;
+  background: #007bff;
+  color: rgb(255, 255, 255);
+  padding: 15px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s;
+  font-size: 1,2rem;
+}
+
+.cta-btn:hover {
+  background: #ce8236;
+}
+
+
+ .hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%; /* Mengisi lebar penuh */
+  height: 100vh; /* Mengisi tinggi viewport penuh */
+  margin: 0; /* Hilangkan margin bawaan */
+  padding: 0; /* Hilangkan padding */
+}
+
+.image-section {
+  flex: 1; /* Memastikan elemen ini fleksibel untuk memenuhi ruang */
+  height: 100%; /* Tinggi penuh mengikuti hero */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Memusatkan gambar */
+  overflow: hidden; /* Hilangkan elemen yang melampaui area */
+  margin: 0; /* Hilangkan margin tambahan */
+  padding: 0; /* Hilangkan padding tambahan */
+}
+
+.hero-image {
+  width: 100%; /* Mengisi lebar penuh */
+  height: 100%; /* Mengisi tinggi penuh */
+/* Gambar mengisi penuh tanpa jarak */
+ /* Memusatkan gambar jika dipotong */
+  display: block; /* Hilangkan jarak bawaan pada elemen inline */
+  margin: 0; /* Pastikan tidak ada margin */
+  padding: 0; /* Pastikan tidak ada padding */
+}
+
+
+
+section {
+  padding: 0px;
+  margin: 0px 0;
+  background: white;
+  border-radius: 0px;
+  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+}
+
+footer {
+  text-align: center;
+  padding: 10px 0;
+  background: #333;
+  color: white;
+  margin-top: 20px;
+}
+
+footer a {
+  color: #3897f0;
+  text-decoration: none;
+}
+
+.menu-title {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: bold;
+  color: #007bff; /* Sesuaikan warna sesuai tema */
+  margin-bottom: 20px;
+  margin-top: 30px; /* Jarak atas dari elemen sebelumnya */
+}
+
+
+.menu {
+  /* background: linear-gradient(135deg, #f09b45, #f07c2f); Atur warna atau gradien background */
+  width: 100%; /* Mengisi seluruh lebar */
+  padding: 100px 0; /* Memberikan ruang atas dan bawah */
+  margin: 0; /* Hilangkan margin bawaan */
+  box-sizing: border-box; /* Pastikan padding tidak memengaruhi ukuran */
+}
+
+.image-menu {
+  text-align: center; /* Memusatkan konten */
+  margin: 20px 0; /* Jarak atas dan bawah */
+}
+
+.menu-image {
+  max-width: 50%;
+  height: 20%;
+  margin-bottom: 10px;
+}
+/* .menu-sec{
+  background-color: #f5f5f3;
+  margin-right: 100px;
+  margin-left: 100px;
+  border-radius: 50px;
+  padding-top: 30px;
+} */
+
+.menu-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center; /* Elemen mulai dari kiri */
+  gap: 100px; /* Tambahkan jarak konsisten antar elemen */
+  align-items: center; /* Vertikal sejajar */
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+.menurow {
+  margin-top: 30px;
+  width: 40%;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.5s;
+  margin-bottom: 30px;
+}
+
+.menurow:hover {
+  transform: scale(1.05); /* Memperbesar sedikit untuk efek interaktif */
+}
+
+.menurow h3,
+.menurow p {
+  margin: 0; /* Hilangkan margin default */
+  padding: 0; /* Hilangkan padding default */
+}
+
+.menurow h3 {
+  margin-top: 0px; /* Tambahkan sedikit jarak di atas teks */
+  font-size: 1.2em; /* Sesuaikan ukuran teks jika perlu */
+}
+
+.menurow p {
+  margin: 5px 0; /* Jarak antara paragraf dan elemen lainnya */
+}
+
+
+.alert {
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+.alert-success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.alert-danger {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+
+.admin-dashboard header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+.admin-dashboard #menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    z-index: 5;
+}
+
+.admin-dashboard .main-content {
+    padding: 80px 20px 20px 20px;
+}
+
+.admin-dashboard table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.admin-dashboard th, td {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.admin-dashboard th {
+    background-color: #f4f4f4;
+}
+
+.card-section {
+  margin-top: 30px; /* Sesuaikan jarak atas sesuai kebutuhan */
+  padding: 20px 0;  /* Tambahkan padding untuk internal */
+  background-color: white;
+  margin-bottom: 50px;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.col-lg-6 {
+  flex: 1 1 calc(50% - 20px);
+  box-sizing: border-box;
+}
+
+.card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+}
+.card-title {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: bold;
+  color: #007bff; /* Sesuaikan warna sesuai tema */
+  margin-bottom: 40px;
+  /* Jarak atas dari elemen sebelumnya */
+}
+
+.card-header {
+  background-color: #ffc107;
+  color: white;
+  padding: 15px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  font-size: 0.875rem;
+  font-weight: bold;
+
+}
+
+.card-header h2{
+  margin-left: 10px;
+}
+
+.card-body {
+  padding: 15px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.card-body p{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-align: justify;
+}
+
+@media (max-width: 768px) {
+  .col-lg-6 {
+      flex: 1 1 100%;
+  }
+}

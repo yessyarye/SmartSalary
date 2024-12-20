@@ -1,0 +1,29 @@
+<div id="menu" xmlns:th="http://www.w3.org/1999/xhtml">
+    <a th:href="@{/user/dashboard}" class="menu-link"
+       th:classappend="${currentUri.startsWith('/user/dashboard')} ? 'active' : ''">
+        <i class="la la-home"></i>Dashboard
+    </a>
+    <div class="submenu">
+        <a href="#" class="submenu-toggle" onclick="toggleSubmenu(event)">
+            <i class="la la-info-circle"></i>Data
+            <i class="la la-angle-down caret"></i>
+        </a>
+        <div class="submenu-content">
+            <a th:href="@{/user/viewdata}" class="submenu-link"
+               th:classappend="${currentUri.startsWith('/user/viewdata')} ? 'active' : ''">
+                <i class="la la-database"></i>Detail Data
+            </a>
+            <a th:href="@{/user/grafik}" class="submenu-link"
+               th:classappend="${currentUri.startsWith('/user/grafik')} ? 'active' : ''">
+                <i class="la la-chart-bar"></i>Grafik
+            </a>
+        </div>
+    </div>
+    <a th:href="@{/user/prediksi}" class="menu-link"
+       th:classappend="${currentUri.startsWith('/user/prediksi')} ? 'active' : ''">
+        <i class="la la-envelope"></i>Prediksi Gaji
+    </a>
+    <a th:href="@{/logout}" class="menu-link">
+        <i class="la la-sign-out-alt"></i>Logout
+    </a>
+</div>

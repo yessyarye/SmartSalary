@@ -1,0 +1,36 @@
+<div id="menu" xmlns:th="http://www.w3.org/1999/xhtml">
+    <a th:href="@{/admin/dashboardadmin}" class="menu-link"
+       th:classappend="${currentUri.startsWith('/admin/dashboardadmin')} ? 'active' : ''">
+        <i class="la la-home"></i>Dashboard
+    </a>
+    <div class="submenu">
+        <a href="#" class="submenu-toggle" onclick="toggleSubmenu(event)">
+            <i class="la la-info-circle"></i>Lihat Data Lengkap
+            <i class="la la-angle-down caret"></i>
+        </a>
+        <div class="submenu-content">
+            <a th:href="@{/admin/viewdata}" class="submenu-link"
+               th:classappend="${currentUri.startsWith('/admin/viewdata')} ? 'active' : ''">
+                <i class="la la-database"></i>Detail Data
+            </a>
+            <a th:href="@{/admin/newdata}" class="submenu-link"
+               th:classappend="${currentUri.startsWith('/admin/newdata')} ? 'active' : ''">
+                <i class="la la-folder-plus"></i>Data Baru Ditambahkan
+            </a>
+            <a th:href="@{/admin/export}" class="submenu-link" onclick="confirmDownload(event)"
+               th:classappend="${currentUri.startsWith('/admin/export')} ? 'active' : ''">
+                <i class="la la-download"></i>Export Data
+            </a>
+        </div>
+    </div>
+    <a th:href="@{/admin/prediksi}" class="menu-link"
+       th:classappend="${currentUri.startsWith('/admin/prediksi')} ? 'active' : ''">
+        <i class="la la-envelope"></i>Prediksi Gaji
+    </a>
+    <a th:href="@{/logout}" class="menu-link">
+        <i class="la la-sign-out-alt"></i>Logout
+    </a>
+</div>
+
+<script src="/js/script.js"></script>
+

@@ -1,0 +1,110 @@
+.open-menu i {
+    font-size: 24px; /* Atur ukuran ikon */
+    margin-right: 0; /* Beri jarak antara ikon dan teks "Menu" */
+    color: #333; /* Warna ikon */
+    vertical-align: middle; /* Ikon sejajar dengan teks */
+}
+
+/* Styling untuk menu toggle */
+#menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #ffffff;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+#menu a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 17px;
+    color: rgb(0, 0, 0);
+    display: block;
+    transition: 0.3s;
+}
+
+#menu a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.open-menu {
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+#menu a i {
+    margin-right: 10px;
+    font-size: 1.3em; /* Ukuran ikon */
+    color: #007bff; /* Warna ikon */
+}
+
+
+.submenu {
+    position: relative;
+}
+
+/* Submenu disembunyikan secara default */
+.submenu-content {
+    display: none;
+    margin-left: 20px;
+    padding: 10px 0;
+    background-color: #ffffff;
+    border-left: 2px solid #ccc;
+}
+
+/* Tampilkan submenu saat parent memiliki kelas .open */
+.submenu.open .submenu-content {
+    display: block;
+}
+
+.submenu-toggle {
+    display: flex; /* Gunakan flex untuk mengatur teks dan ikon dalam satu baris */
+    align-items: center; /* Vertikal tengah */
+    justify-content: space-between; /* Biarkan teks di kiri dan panah di kanan */
+    position: relative; /* Untuk menjaga kontekstual panah */
+}
+
+.caret {
+    position: absolute; /* Posisi absolut berdasarkan parent */
+    right: 20px; /* Jarak panah dari sisi kanan */
+    left: 220px;
+    top: 30%; /* Vertikal tengah */
+/* Koreksi posisi vertikal */
+    transition: transform 0.3s; /* Animasi rotasi */
+}
+/* Rotasi caret saat submenu terbuka */
+.submenu.open .caret {
+    transform: scaleY(-1);
+}
+
+
+/* Gaya menu utama */
+#menu .menu-link.active,
+#menu .submenu-toggle.active {
+    background-color: #fcae27; /* Warna latar belakang aktif */
+    color: #fff; /* Warna teks aktif */
+}
+
+/* Gaya submenu */
+.submenu-content .submenu-link.active {
+    background-color: #0056b3; /* Warna aktif untuk submenu */
+    color: #fff;
+}
+
+/* Hover untuk efek lebih */
+#menu .menu-link:hover,
+#menu .submenu-toggle:hover,
+.submenu-content .submenu-link:hover {
+    background-color: #0056b3; /* Warna hover */
+    color: #fff;
+}

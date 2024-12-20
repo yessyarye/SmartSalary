@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SmartSalary - Prediksi Gaji Anda</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- Link ke Google Fonts Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+            href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap"
+            rel="stylesheet"
+    />
+</head>
+<body>
+<header id="main-header" class="transparent">
+    <div class="logo">
+        <img
+                src="/assets/logos.png"
+                alt="Logo SmartSalary"
+                class="logo-image"
+        />
+        <h1>SmartSalary</h1>
+    </div>
+    <div class="auth-buttons">
+        <a href="/login" class="btn">Login</a>
+        <a href="/signup" class="btn">Signup</a>
+    </div>
+</header>
+
+<main>
+    <section class="hero">
+        <div class="hero-content">
+            <div class="text-section">
+                <h1>SmartSalary</h1>
+                <p>Prediksi gaji Anda dengan data terkini</p>
+                <p>dan analisis yang mendalam.</p>
+                <a href="#prediksi" class="cta-btn">Mulai Prediksi Sekarang</a>
+            </div>
+            <div class="image-section">
+                <img
+                        src="/assets/money.png"
+                        alt="Prediksi Gaji dengan Data dan Teknologi"
+                        class="hero-image"
+                />
+            </div>
+        </div>
+    </section>
+
+    <section class="card-section">
+        <h2 class="card-title">SmartSalary</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="card mb-4">
+                        <div class="card-header bg-warning text-white">
+                            <h2>Apa Itu SmartSalary?</h2>
+                        </div>
+                        <div class="card-body">
+                            <p>
+                                SmartSalary adalah platform prediksi gaji berbasis website
+                                yang menggabungkan teknologi Machine learning untuk
+                                memberikan estimasi gaji berdasarkan umur, pengalaman kerja,
+                                dan posisi yang diinginkan.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card mb-4">
+                        <div class="card-header bg-warning text-white">
+                            <h2>Mengapa SmartSalary?</h2>
+                        </div>
+                        <div class="card-body">
+                            <p>
+                                Kami percaya bahwa setiap individu berhak mendapatkan
+                                informasi gaji yang transparan dan akurat. SmartSalary hadir
+                                untuk membantu Anda memahami pasar kerja dan menyesuaikan
+                                ekspektasi gaji berdasarkan data terkini.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card mb-4">
+                        <div class="card-header bg-warning text-white">
+                            <h2>Tujuan Kami</h2>
+                        </div>
+                        <div class="card-body">
+                            <p>
+                                Tujuan kami adalah memberikan wawasan berharga kepada
+                                pencari kerja dan pemberi kerja melalui data gaji yang
+                                transparan, sehingga proses negosiasi gaji dapat menjadi
+                                lebih adil dan informatif.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card mb-4">
+                        <div class="card-header bg-warning text-white">
+                            <h2>Dataset</h2>
+                        </div>
+                        <div class="card-body">
+                            <p>
+                                Data yang digunakan SmartSalary berjudul Salary Data dari
+                                situs Kaggle, yaitu situs mengenai data yang terpercaya.
+                                Dataset diolah dan mendapatkan hasil bahwa algoritma
+                                terbaiknya adalah Random Forest denga akurasi 98%
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="menu-title">Fitur Utama</h2>
+        <div class="menu-container">
+            <div class="menurow">
+                <img
+                        src="/assets/research.png"
+                        alt="Deskripsi Gambar"
+                        class="menu-image"
+                />
+                <h3>Lihat Data Gaji</h3>
+                <p>Data gaji terkini dari berbagai industri dan posisi.</p>
+                <a href="#" class="cta-btn">Lihat Data</a>
+            </div>
+            <div class="menurow">
+                <img
+                        src="/assets/grafic.png"
+                        alt="Deskripsi Gambar"
+                        class="menu-image"
+                />
+                <h3>Lihat Grafik</h3>
+                <p>Visualisasi data gaji untuk analisis yang lebih baik.</p>
+                <a href="#" class="cta-btn">Lihat Grafik</a>
+            </div>
+            <div class="menurow">
+                <img
+                        src="/assets/salary.png"
+                        alt="Deskripsi Gambar"
+                        class="menu-image"
+                />
+                <h3>Prediksi Salary</h3>
+                <p>Prediksi gaji anda dengan data terkini dan akurat</p>
+                <a href="#" class="cta-btn">Prediksi Salary</a>
+            </div>
+        </div>
+    </section>
+</main>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const header = document.getElementById("main-header");
+
+        // Fungsi untuk mengubah kelas saat scroll
+        const toggleHeaderBackground = () => {
+            if (window.scrollY > 50) {
+                header.classList.add("scrolled");
+                header.classList.remove("transparent");
+            } else {
+                header.classList.add("transparent");
+                header.classList.remove("scrolled");
+            }
+        };
+
+        // Event listener untuk scroll
+        window.addEventListener("scroll", toggleHeaderBackground);
+    });
+</script>
+
+<footer>
+    <p>&copy; 2023 SmartSalary. Semua hak dilindungi.</p>
+    <p>
+        <a href="#privacy">Kebijakan Privasi</a> |
+        <a href="#terms">Syarat dan Ketentuan</a>
+    </p>
+</footer>
+</body>
+</html>

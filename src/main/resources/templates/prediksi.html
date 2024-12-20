@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Halaman Prediksi</title>
+    <!-- Link ke Line Awesome -->
+    <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css"
+            rel="stylesheet"
+    />
+    <link rel="stylesheet" th:href="@{/css/SideBar.css}" />
+    <link rel="stylesheet" th:href="@{/css/prediksi.css}" />
+    <!-- Link ke Google Fonts Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+            href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap"
+            rel="stylesheet"
+    />
+</head>
+<body class="prediksi">
+<!-- Sidebar Menu -->
+<!-- <div th:replace="SideBarAdmin.html"></div> -->
+<div th:replace="SideBarAdmin.html"></div>
+
+<!-- Header -->
+<div th:replace="header.html"></div>
+
+<div class="pred">
+    <h1>Prediksi Gaji</h1>
+    <p>Masukkan data-data untuk prediksi gaji!</p>
+</div>
+<div class="pred-container">
+    <form th:action="@{/admin/prediksi}" method="post">
+        <label>Umur:
+            <input type="number" name="age" th:value="${age}" placeholder="Cth: 20, 35" required />
+        </label><br />
+        <label>Gender:
+            <input type="text" name="gender" th:value="${gender}" placeholder="Female or Male" required />
+        </label><br />
+        <label>Level Pendidikan:
+            <input type="text" name="educationLevel" th:value="${educationLevel}" placeholder="Bachelor's, Master's, Phd" required />
+        </label><br />
+        <label>Pekerjaan:
+            <input type="text" name="jobTitle" th:value="${jobTitle}" placeholder="Engineer, Software Engineer" required />
+        </label><br />
+        <label>Tahun Pengalaman:
+            <input type="number" name="yearsExperience" th:value="${yearsExperience}" placeholder="Cth: 5, 9, dst." required />
+        </label><br />
+        <button type="submit">Prediksi Gaji</button>
+    </form>
+
+
+    <div class="pred-result">
+        <!-- Bagian Hasil -->
+        <div th:if="${predictedSalary}">
+            <h2>Hasil Prediksi</h2>
+            <p th:text="'$' + ${#numbers.formatDecimal(predictedSalary, 2, 2)}"></p>
+        </div>
+
+        <div th:if="${error}">
+            <h2>Error</h2>
+            <p th:text="${error}"></p>
+        </div>
+    </div>
+</div>
+
+
+<script th:src="@{/js/script.js}"></script>
+</body>
+</html>

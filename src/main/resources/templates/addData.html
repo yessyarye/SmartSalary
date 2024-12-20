@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tambah Data Gaji</title>
+    <!-- Include your CSS files here -->
+    <!-- Link ke Line Awesome -->
+    <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css"
+            rel="stylesheet"
+    />
+    <link rel="stylesheet" th:href="@{/css/SideBar.css}" />
+    <link rel="stylesheet" th:href="@{/css/prediksi.css}" />
+    <!-- Link ke Google Fonts Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+            href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap"
+            rel="stylesheet"
+    />
+</head>
+<body>
+
+<div th:replace="SideBarAdmin.html"></div>
+
+<div th:replace="header.html"></div>
+
+<div class="main-content">
+    <h1>Tambah Data Gaji Baru</h1>
+
+    <form th:action="@{/admin/add_data}" th:object="${salaryData}" method="post">
+        <div>
+            <label for="age">Age:</label>
+            <input type="number" id="age" th:field="*{age}" required />
+        </div>
+        <div>
+            <label for="gender">Gender:</label>
+            <input type="text" id="gender" th:field="*{gender}" required />
+        </div>
+        <div>
+            <label for="educationLevel">Education Level:</label>
+            <input type="text" id="educationLevel" th:field="*{educationLevel}" required />
+        </div>
+        <div>
+            <label for="jobTitle">Job Title:</label>
+            <input type="text" id="jobTitle" th:field="*{jobTitle}" required />
+        </div>
+        <div>
+            <label for="yearsOfExperience">Years of Experience:</label>
+            <input type="number" id="yearsOfExperience" th:field="*{yearsOfExperience}" required />
+        </div>
+        <div>
+            <label for="salary">Salary:</label>
+            <input type="number" id="salary" th:field="*{salary}" required />
+        </div>
+        <button type="submit">Tambah Data</button>
+    </form>
+</div>
+
+</body>
+</html>

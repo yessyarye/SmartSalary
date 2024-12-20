@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard User</title>
+    <!-- Link ke Line Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/SideBar.css}" />
+    <link rel="stylesheet" th:href="@{/css/dashboard.css}" />
+    <!-- Link ke Google Fonts Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap" rel="stylesheet">
+</head>
+<body class="admin-dashboard">
+
+<!-- Sidebar Menu -->
+<div th:replace="SideBarUser.html"></div>
+
+<!-- Header -->
+<div th:replace="header.html"></div>
+
+<div class="main-content-graf">
+    <h1>Selamat datang di SmartSalary</h1>
+    <p>Ini adalah halaman untuk Grafik.</p>
+</div>
+<!-- Embed Tableau Visualization -->
+<div
+        class="tableauPlaceholder"
+        id="viz1734590942190"
+        style="position: relative; margin-left: 250px; margin-top: 20px;"
+>
+    <noscript
+    ><a href="#"
+    ><img
+            alt=" "
+            src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Bo&#47;Book3_17343593091730&#47;TOP20&#47;1_rss.png"
+            style="border: none" /></a></noscript
+    ><object class="tableauViz" style="display: none">
+    <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />
+    <param name="embed_code_version" value="3" />
+    <param name="site_root" value="" />
+    <param name="name" value="Book3_17343593091730&#47;TOP20" />
+    <param name="tabs" value="no" />
+    <param name="toolbar" value="yes" />
+    <param
+            name="static_image"
+            value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Bo&#47;Book3_17343593091730&#47;TOP20&#47;1.png"
+    />
+    <param name="animate_transition" value="yes" />
+    <param name="display_static_image" value="yes" />
+    <param name="display_spinner" value="yes" />
+    <param name="display_overlay" value="yes" />
+    <param name="display_count" value="yes" />
+    <param name="language" value="en-US" />
+</object>
+</div>
+<script type="text/javascript">
+    var divElement = document.getElementById("viz1734590942190");
+    var vizElement = divElement.getElementsByTagName("object")[0];
+    vizElement.style.width = "80%";
+    vizElement.style.height = divElement.offsetWidth * 0.5 + "px";
+    var scriptElement = document.createElement("script");
+    scriptElement.src = "https://public.tableau.com/javascripts/api/viz_v1.js";
+    vizElement.parentNode.insertBefore(scriptElement, vizElement);
+</script>
+
+<div class="tableauPlaceholder" id="viz1734586827543" style="position: relative; margin-left: 250px;">
+    <noscript>
+        <a href="#">
+            <img
+                    alt=" "
+                    src="https://public.tableau.com/static/images/Bo/Book3_17343593091730/Sheet2/1_rss.png"
+                    style="border: none"
+            />
+        </a>
+    </noscript>
+    <object class="tableauViz" style="display: none">
+        <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />
+        <param name="embed_code_version" value="3" />
+        <param name="site_root" value="" />
+        <param name="name" value="Book3_17343593091730/Sheet2" />
+        <param name="tabs" value="no" />
+        <param name="toolbar" value="yes" />
+        <param
+                name="static_image"
+                value="https://public.tableau.com/static/images/Bo/Book3_17343593091730/Sheet2/1.png"
+        />
+        <param name="animate_transition" value="yes" />
+        <param name="display_static_image" value="yes" />
+        <param name="display_spinner" value="yes" />
+        <param name="display_overlay" value="yes" />
+        <param name="display_count" value="yes" />
+        <param name="language" value="en-US" />
+        <param name="filter" value="publish=yes" />
+    </object>
+</div>
+
+<script type="text/javascript">
+    var divElement = document.getElementById("viz1734586827543");
+    var vizElement = divElement.getElementsByTagName("object")[0];
+    vizElement.style.width = "80%";
+    vizElement.style.height = divElement.offsetWidth * 0.5 + "px"; /* Rasio lebar ke tinggi */
+    var scriptElement = document.createElement("script");
+    scriptElement.src = "https://public.tableau.com/javascripts/api/viz_v1.js";
+    vizElement.parentNode.insertBefore(scriptElement, vizElement);
+</script>
+
+<script th:src="@{/js/script.js}">
+</script>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Page</title>
+  <!-- Link ke Line Awesome -->
+  <link
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+          rel="stylesheet"
+  />
+  <!-- Link ke Google Fonts Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/login.css" />
+
+</head>
+<body>
+<div class="container">
+  <div class="left">
+    <h1>SmartSalary</h1>
+    <h2>Estimasi Gaji Anda, Untuk Pilihan Karier yang Lebih Cerdas</h2>
+    <div class="partners">
+      <img src="assets/peppa.jpeg" alt="Partner 1" />
+      <img src="assets/mashle.png" alt="Partner 2" />
+      <img src="assets/aot.png" alt="Partner 3" />
+    </div>
+    <p>© 2024 Yessy Arye. All Rights Reserved.</p>
+  </div>
+  <div class="right">
+    <div class="form-container">
+      <h2>Masuk</h2>
+      <p>Belum punya akun? <a href="/signup">Daftar di sini</a></p>
+
+      <!-- Flash Message Section -->
+      <div th:if="${message}" class="alert alert-success">
+        <p th:text="${message}"></p>
+      </div>
+      <div th:if="${error}" class="alert alert-danger">
+        <p th:text="${error}"></p>
+      </div>
+
+      <!-- Form Login -->
+      <form action="/login" method="POST">
+        <input type="email" name="email" placeholder="Email" required />
+        <div class="password-container">
+          <input
+                  type="password"
+                  name="password"
+                  placeholder="Kata sandi"
+                  id="password"
+                  required
+          />
+          <i class="fa-solid fa-eye toggle-icon" id="eyeicon1"></i>
+        </div>
+        <button type="submit">Masuk</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Link ke file script.js -->
+<script src="js/script.js"></script>
+</body>
+</html>

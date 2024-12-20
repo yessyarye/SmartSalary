@@ -1,0 +1,11 @@
+<header>
+    <span class="open-menu" onclick="toggleMenu()">&#9776;</span>
+    <div class="logo">
+        <img th:src="@{/assets/logos.png}" alt="logo" class="logo-image" />
+        <h3>SmartSalary</h3>
+    </div>
+    <div class="profile">
+        <img src="https://cdn-icons-png.flaticon.com/512/5987/5987424.png" alt="Profile Picture" />
+        <span th:text="${members.firstname}"></span>
+    </div>
+</header>

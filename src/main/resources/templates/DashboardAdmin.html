@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css" rel="stylesheet">
+
+    <!-- Link ke Line Awesome -->
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" th:href="@{/css/SideBar.css}" />
+    <link rel="stylesheet" th:href="@{/css/dashboard.css}" />
+    <!-- Link ke Google Fonts Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap" rel="stylesheet">
+    <title>Dashboard Admin</title>
+</head>
+<body>
+<!-- Sidebar Menu -->
+<div th:replace="SideBarAdmin.html"></div>
+
+<!-- Header -->
+<div th:replace="header.html"></div>
+
+
+<div class="dashboard">
+    <div class="card">
+        <div class="card-content">
+            <div>
+                <h2 th:text="${totalUsers}">Loading...</h2>
+                <p>Total Pengguna</p>
+            </div>
+            <div class="icon">
+                <i class="la la-user-friends"></i>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-content">
+
+            <div>
+                <h2 th:text="${newSalaryData}">Loading...</h2>
+                <p>Data Baru</p>
+            </div>
+            <div class="icon">
+                <i class="las la-database"></i>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-content">
+
+            <div>
+                <h2 th:text="${totalMembers}">Loading...</h2>
+                <p>Total Akun</p>
+            </div>
+            <div class="icon">
+                <i class="la la-users"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--grafik-->
+
+<script th:src="@{/js/script.js}">
+</script>
+</body>
+</html>

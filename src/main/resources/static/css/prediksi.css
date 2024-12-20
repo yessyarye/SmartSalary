@@ -1,0 +1,149 @@
+header {
+    background-color: #274cc5;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+}
+
+.logo {
+ /* Memberi jarak antara menu dan logo */
+    display: flex; /* Untuk menampilkan gambar dan teks dalam satu baris */
+    align-items: center;
+    gap: 10px; /* Jarak antara gambar dan teks logo */
+}
+
+.logo h3 {
+    font-size: 30px;
+    margin: 0;
+
+}
+
+.logo-image {
+    margin-left: 200px;
+    width: 40px;
+    height: 40px;
+/* Opsional, jika ingin gambar berbentuk lingkaran */
+}
+
+/* Styling untuk profil */
+.profile {
+    margin-right: 200px;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+
+
+/* Styling untuk konten utama */
+body {
+    font-family: "Parkinsans", serif;
+    margin: 0;
+    padding: 0;
+    transition: margin-left 0.5s;
+    background: #ffffff;
+}
+
+.main-content {
+    padding: 100px 250px 250px 260px; /* Tambahkan padding untuk header fixed */
+}
+
+
+label {
+    font-weight: bold; /* Membuat teks label tebal */
+    display: block; /* Membuat label tampil di atas input */
+    margin-bottom: 5px; /* Tambahkan jarak antara label dan input */
+}
+
+.pred{
+    margin-top: 100px;
+    margin-left: 280px;
+
+}
+
+input[type="text"] {
+    margin-bottom: 10px;
+    padding: 15px; /* Tambahkan ruang dalam */
+    width: 100%; /* Isi lebar kontainer */
+    box-sizing: border-box; /* Pastikan padding tidak memengaruhi ukuran total */
+    border-radius: 10px; /* Membuat sudut tumpul */
+    border: 1px solid #ccc; /* Beri garis tepi untuk input */
+    outline: none; /* Hilangkan garis fokus bawaan */
+    transition: border-color 0.3s ease; /* Animasi saat fokus */
+}
+
+input[type="text"]:focus {
+    border-color: #007BFF; /* Ubah warna garis tepi saat fokus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Efek bayangan saat fokus */
+}
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #005bac;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #6ba6e9;
+  }
+
+
+input[type="number"] {
+    margin-bottom: 10px;
+    padding: 15px; /* Tambahkan ruang dalam */
+    width: 100%; /* Isi lebar kontainer */
+    box-sizing: border-box; /* Pastikan padding tidak memengaruhi ukuran total */
+    border-radius: 10px; /* Membuat sudut tumpul */
+    border: 1px solid #ccc; /* Beri garis tepi untuk input */
+    outline: none; /* Hilangkan garis fokus bawaan */
+    transition: border-color 0.3s ease; /* Animasi saat fokus */
+}
+
+input[type="number"]:focus {
+    border-color: #007BFF; /* Ubah warna garis tepi saat fokus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Efek bayangan saat fokus */
+}
+
+
+.pred-container {
+    display: flex;
+    gap: 100px;
+    align-items: flex-start;
+    margin-left: 250px;
+    margin-right: auto;
+    padding: 20px;
+    max-width: 900px;
+}
+
+form {
+    flex: 1; /* Form akan menempati ruang tersisa */
+    min-width: 300px; /* Pastikan form tidak terlalu kecil */
+    max-width: 400px; /* Atur lebar maksimum form */
+}
+
+.pred-result {
+    flex: 1; /* Bagian hasil juga menempati ruang tersisa */
+    padding: 20px;
+    border: 1px solid #ccc; /* Tambahkan garis tepi untuk membedakan */
+    border-radius: 10px; /* Membuat sudut lebih halus */
+    background-color: #f9f9f9; /* Tambahkan warna latar belakang */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+
+}

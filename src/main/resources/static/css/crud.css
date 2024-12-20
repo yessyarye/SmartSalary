@@ -1,0 +1,128 @@
+/* Styling untuk konten utama */
+body {
+    font-family: "Parkinsans", serif;
+    margin: 0;
+    padding: 0;
+    transition: margin-left 0.5s;
+}
+
+.main-content {
+    padding: 100px 250px 250px 250px; /* Tambahkan padding untuk header fixed */
+}
+
+/* Gaya untuk tabel */
+table {
+    width: 100%; /* Sesuaikan lebar tabel */
+    border-collapse: collapse; /* Hilangkan jarak antar border */
+    background-color: #fff; /* Latar belakang tabel */
+    border-radius: 10px; /* Sudut tumpul */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+    overflow: hidden; /* Pastikan sudut tumpul terlihat */
+    margin-top: 20px; /* Jarak dari elemen lain */
+}
+
+/* Gaya untuk header tabel */
+table thead tr {
+    background-color: #274cc5; /* Warna header tabel */
+    color: #fff; /* Warna teks header */
+    text-align: left; /* Rata kiri */
+    font-weight: bold; /* Teks tebal */
+}
+
+
+/* Gaya untuk sel tabel */
+table th, table td {
+    padding: 15px; /* Ruang dalam sel */
+    text-align: left; /* Rata kiri */
+}
+
+/* Gaya untuk baris tabel */
+table tbody tr:nth-child(odd) {
+    background-color: #f9f9f9; /* Warna latar untuk baris ganjil */
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #fff; /* Warna latar untuk baris genap */
+}
+
+/* Gaya untuk efek hover pada baris */
+table tbody tr:hover {
+    background-color: #f1f1f1; /* Ubah warna latar saat hover */
+}
+
+
+/* Container untuk menempatkan tombol dalam satu baris */
+.button-container {
+    display: flex; /* Menggunakan Flexbox untuk layout */
+    align-items: center; /* Pastikan tombol rata secara vertikal */
+    gap: 10px; /* Jarak antar tombol */
+    max-width: 200px;
+
+}
+
+/* Tombol Edit */
+.btn.btn-warning {
+    background-color: #f0ad4e; /* Warna oranye */
+    color: #fff; /* Warna teks putih */
+    border: none; /* Hilangkan border default */
+    padding: 10px 15px; /* Padding untuk memperbesar area klik */
+    border-radius: 5px; /* Sudut melengkung */
+    cursor: pointer; /* Ubah kursor menjadi pointer */
+    font-size: 14px; /* Ukuran font */
+    text-decoration: none; /* Hilangkan garis bawah */
+    display: inline-block; /* Pastikan proporsional */
+    transition: background-color 0.3s ease; /* Efek transisi */
+    margin-left: 30px;
+}
+
+
+.btn.btn-warning:hover {
+    background-color: #ec971f; /* Warna oranye gelap saat hover */
+}
+
+.btn {
+    min-width: 80px;
+    text-align: center;
+    display: inline-block;
+}
+
+/* Tombol Delete */
+.btn.btn-danger {
+    font-family: 'Parkinsans', sans-serif; /* Tambahkan font Parkinsas */
+    background-color: #d9534f; /* Warna merah */
+    color: #fff; /* Warna teks putih */
+    border: none; /* Hilangkan border default */
+    padding: 10px 15px; /* Padding untuk memperbesar area klik */
+    border-radius: 5px; /* Sudut melengkung */
+    cursor: pointer; /* Ubah kursor menjadi pointer */
+    font-size: 14px; /* Ukuran font */
+    text-decoration: none; /* Hilangkan garis bawah */
+    display: inline-block; /* Pastikan proporsional */
+    transition: background-color 0.3s ease; /* Efek transisi */
+    max-width: 110px;
+}
+
+.btn.btn-danger:hover {
+    background-color: #c9302c; /* Warna merah gelap saat hover */
+}
+
+/* Form bertipe inline */
+.inline-form {
+    display: inline;
+    margin: 0; /* Hilangkan margin default */
+}
+
+.btn.btn-primary{
+    font-family: 'Parkinsans', sans-serif; /* Tambahkan font Parkinsas */
+    background-color: #d9534f; /* Warna merah */
+    color: #fff; /* Warna teks putih */
+    border: none; /* Hilangkan border default */
+    padding: 10px 15px; /* Padding untuk memperbesar area klik */
+    border-radius: 5px; /* Sudut melengkung */
+    cursor: pointer; /* Ubah kursor menjadi pointer */
+    font-size: 14px; /* Ukuran font */
+    text-decoration: none; /* Hilangkan garis bawah */
+    display: inline-block; /* Pastikan proporsional */
+    transition: background-color 0.3s ease; /* Efek transisi */
+    max-width: 110px;
+}

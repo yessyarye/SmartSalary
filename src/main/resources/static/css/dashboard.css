@@ -1,0 +1,240 @@
+
+
+header {
+    background-color: #274cc5;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+
+}
+
+.logo {
+ /* Memberi jarak antara menu dan logo */
+    display: flex; /* Untuk menampilkan gambar dan teks dalam satu baris */
+    align-items: center;
+    gap: 10px; /* Jarak antara gambar dan teks logo */
+}
+
+.logo h3 {
+    font-size: 30px;
+    margin: 0;
+
+}
+
+.logo-image {
+    margin-left: 200px;
+    width: 40px;
+    height: 40px;
+}
+
+/* Styling untuk profil */
+.profile {
+    margin-right: 200px;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+
+
+/* Styling untuk konten utama */
+body {
+    font-family: "Parkinsans", serif;
+    margin: 0;
+    padding: 0;
+    transition: margin-left 0.5s;
+}
+
+.main-content {
+    padding: 100px 250px 250px 250px; /* Tambahkan padding untuk header fixed */
+}
+
+/* Gaya untuk tabel */
+table {
+    width: 100%; /* Sesuaikan lebar tabel */
+    border-collapse: collapse; /* Hilangkan jarak antar border */
+    background-color: #fff; /* Latar belakang tabel */
+    border-radius: 10px; /* Sudut tumpul */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+    overflow: hidden; /* Pastikan sudut tumpul terlihat */
+    margin-top: 20px; /* Jarak dari elemen lain */
+}
+
+/* Gaya untuk header tabel */
+table thead tr {
+    background-color: #274cc5; /* Warna header tabel */
+    color: #fff; /* Warna teks header */
+    text-align: left; /* Rata kiri */
+    font-weight: bold; /* Teks tebal */
+}
+
+/* Gaya untuk sel tabel */
+table th, table td {
+    padding: 15px; /* Ruang dalam sel */
+    /* border: 1px solid #ddd; Garis pembatas antar sel */
+    text-align: left; /* Rata kiri */
+}
+
+/* Gaya untuk baris tabel */
+table tbody tr:nth-child(odd) {
+    background-color: #f9f9f9; /* Warna latar untuk baris ganjil */
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #fff; /* Warna latar untuk baris genap */
+}
+
+/* Gaya untuk efek hover pada baris */
+table tbody tr:hover {
+    background-color: #f1f1f1; /* Ubah warna latar saat hover */
+}
+
+/* Styling untuk Pagination */
+#pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#pagination button {
+    padding: 10px 15px;
+    margin: 0 5px;
+    border: 1px solid #ddd;
+    background-color: #f1f1f1;
+    color: #333;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#pagination button:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+#pagination button:disabled {
+    background-color: #e0e0e0;
+    color: #aaa;
+    cursor: not-allowed;
+}
+
+/* Styling untuk Nomor Halaman */
+#pagination span {
+    font-size: 16px;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+/* Responsivitas */
+@media (max-width: 768px) {
+    #pagination button {
+        padding: 8px 12px;
+    }
+
+    #pagination span {
+        font-size: 14px;
+    }
+}
+
+label {
+    font-weight: bold; /* Membuat teks label tebal */
+    display: block; /* Membuat label tampil di atas input */
+    margin-bottom: 5px; /* Tambahkan jarak antara label dan input */
+}
+
+input[type="text"] {
+    margin-bottom: 10px;
+    padding: 15px; /* Tambahkan ruang dalam */
+    width: 100%; /* Isi lebar kontainer */
+    box-sizing: border-box; /* Pastikan padding tidak memengaruhi ukuran total */
+    border-radius: 10px; /* Membuat sudut tumpul */
+    border: 1px solid #ccc; /* Beri garis tepi untuk input */
+    outline: none; /* Hilangkan garis fokus bawaan */
+    transition: border-color 0.3s ease; /* Animasi saat fokus */
+}
+
+input[type="text"]:focus {
+    border-color: #007BFF; /* Ubah warna garis tepi saat fokus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Efek bayangan saat fokus */
+}
+
+.dashboard {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-left: 250px;
+    padding: 20px;
+    margin-right: 250px;
+  }
+
+  .card {
+    margin-top: 70px;
+    border: 1px solid #f0f0f0;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    display: flex; /* Atur tata letak fleksibel */
+    align-items: center;
+    justify-content: space-between; /* Pisahkan teks dan ikon ke kiri dan kanan */
+    max-width: 300px;
+}
+
+.card-content {
+    display: flex;
+    align-items: center; /* Tengah vertikal */
+    justify-content: space-between; /* Pisahkan konten */
+    width: 100%; /* Isi penuh kartu */
+}
+
+.icon {
+    margin-left: 15px; /* Jarak antara teks dan ikon */
+    font-size: 50px; /* Ukuran ikon */
+    color: #ff9900; /* Warna ikon */
+}
+
+.card h2 {
+    margin: 0; /* Hilangkan margin atas/bawah */
+    font-size: 24px;
+}
+
+.card p {
+    margin: 5px 0 0; /* Beri sedikit jarak ke atas */
+    font-size: 14px;
+    color: #666;
+}
+
+.tableauPlaceholder {
+    margin-left: 260px;
+    margin-right: 260px;
+    max-width: 80%;
+    width: 80%;
+    margin: 20px auto;
+}
+
+.tableauViz {
+    display: block;
+    margin-bottom: 20px;
+    border: none;
+    width: 100%;
+    height: auto;
+}
+.main-content-graf {
+    padding: 100px 250px 25px 250px;
+}

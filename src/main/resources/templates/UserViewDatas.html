@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="id" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U View Data</title>
+    <!-- Link ke Line Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/SideBar.css}" />
+    <link rel="stylesheet" th:href="@{/css/dashboard.css}" />
+    <!-- Link ke Google Fonts Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap" rel="stylesheet">
+</head>
+<body class="admin-dashboard">
+
+<!-- Sidebar Menu -->
+ <div th:replace="SideBarUser.html"></div>
+
+<!-- Header -->
+<div th:replace="header.html"></div>
+
+<!-- Main Content -->
+<div class="main-content">
+    <h1>Data Gaji Karyawan</h1>
+<!--    <p>Ini adalah halaman dashboard untuk Admin.</p>-->
+
+<!--    &lt;!&ndash; Pencarian &ndash;&gt;-->
+<!--    <h2>Data Gaji Karyawan</h2>-->
+    <label for="search">Cari Data:</label>
+    <input type="text" id="search" placeholder="Masukkan kata kunci" onkeyup="searchTable()">
+
+    <!-- Tabel untuk Menampilkan Data -->
+    <table id="dataTable">
+        <thead>
+        <tr>
+            <th>No</th> <!-- Kolom untuk nomor urut -->
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Education Level</th>
+            <th>Job Title</th>
+            <th>Years Of Experience</th>
+            <th>Salary</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="row, iterStat : ${salaryData}">
+            <td th:text="${iterStat.index + 1}"></td> <!-- Menampilkan nomor urut -->
+            <td th:text="${T(java.lang.Math).round(row.Age)}"></td>
+            <td th:text="${row.Gender}"></td>
+            <td th:text="${row['Education Level']}"></td>
+            <td th:text="${row['Job Title']}"></td>
+            <td th:text="${T(java.lang.Math).round(row['Years of Experience'])}"></td>
+            <td th:text="${T(java.lang.Math).round(row.Salary)}"></td>
+        </tr>
+        </tbody>
+    </table>
+    <!-- Pagination -->
+    <div id="pagination">
+        <button id="prevBtn" onclick="changePage(-1)">Prev</button>
+        <span id="pageNumber">1</span>
+        <button id="nextBtn" onclick="changePage(1)">Next</button>
+    </div>
+</div>
+<script th:src="@{/js/script.js}">
+</script>
+
+</body>
+</html>
