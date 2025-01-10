@@ -1,7 +1,4 @@
 # SmartSalary Prediction Web App
-not done yet
-
-![Logo](src/main/resources/static/assets/logos.png)
 
 
 
@@ -46,3 +43,4 @@ Berikut adalah langkah-langkah untuk menginstal dan menjalankan aplikasi SmartSa
    4. run 2 py flask yaitu flask.py dan script.py
    5. run springboot
    6. sudah
+![Logo](src/main/resources/static/assets/logos.png)
